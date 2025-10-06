@@ -1,102 +1,300 @@
-import Image from "next/image";
-
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div className="min-h-screen bg-[var(--color-background)] text-[var(--color-text)]">
+      {/* Navbar */}
+      <header className="fixed top-0 left-0 right-0 z-50">
+        <div className="glass mx-auto max-w-7xl flex items-center justify-between rounded-xl mt-4 px-5 py-3">
+          <div className="text-white/90 font-semibold tracking-tight">
+            Fiotech Orbis
+          </div>
+          <nav className="hidden md:flex items-center gap-6 text-sm text-white/80">
+            <a className="hover:text-white transition-colors" href="#docs">
+              Docs
+            </a>
+            <a className="hover:text-white transition-colors" href="#pricing">
+              Pricing
+            </a>
+            <a className="hover:text-white transition-colors" href="#use-cases">
+              Use Cases
+            </a>
+            <a className="hover:text-white transition-colors" href="#dashboard">
+              Dashboard
+            </a>
+          </nav>
+          <div className="flex items-center gap-2">
+            <a
+              className="btn-outline glow-hover rounded-lg px-4 py-2 text-sm"
+              href="#login"
+            >
+              Login
+            </a>
+            <a
+              className="btn-primary glow-hover rounded-lg px-4 py-2 text-sm"
+              href="#register"
+            >
+              Register
+            </a>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+      </header>
+
+      {/* Hero */}
+      <section className="relative pt-40 pb-28 overflow-hidden">
+        <div className="particles" />
+        <div className="relative mx-auto max-w-5xl px-6 text-center">
+          <h1 className="text-4xl md:text-6xl font-bold leading-tight tracking-tight">
+            Fiotech Orbis - The All-in-One Web3 API Platform
+          </h1>
+          <p className="mt-4 text-white/70 text-lg md:text-xl max-w-3xl mx-auto">
+            Connect, Stream, and Build on any blockchain with powerful developer
+            APIs.
+          </p>
+          <div className="mt-8 flex items-center justify-center gap-3">
+            <a
+              className="btn-primary glow-hover rounded-lg px-6 py-3 text-sm"
+              href="#get-started"
+            >
+              Get Started
+            </a>
+            <a
+              className="btn-outline glow-hover rounded-lg px-6 py-3 text-sm"
+              href="#docs"
+            >
+              View Docs
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* About */}
+      <section id="about" className="relative py-20 px-6">
+        <div className="mx-auto max-w-6xl">
+          <h2 className="text-2xl md:text-3xl font-semibold">
+            What is Fiotech Orbis?
+          </h2>
+          <p className="mt-3 text-white/70 max-w-3xl">
+            Fiotech Orbis is a Web3 API platform that lets developers access
+            blockchain data quickly, securely, and at scale.
+          </p>
+          <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {[
+              {
+                icon: "⚙️",
+                title: "Unified API",
+                desc: "Access multiple blockchains with a single endpoint.",
+              },
+              {
+                icon: "🔔",
+                title: "Realtime Streaming",
+                desc: "Get live blockchain events via WebSocket or Webhook.",
+              },
+              {
+                icon: "🧠",
+                title: "Smart Data Layer",
+                desc: "Integrated caching, indexing, and query optimization.",
+              },
+              {
+                icon: "🪪",
+                title: "Secure Access",
+                desc: "Each API key is managed and scoped via Fiotech Account.",
+              },
+            ].map((f) => (
+              <div
+                key={f.title}
+                className="glass rounded-xl p-5 hover:translate-y-[-2px] transition-transform"
+              >
+                <div className="text-2xl">{f.icon}</div>
+                <div className="mt-2 font-medium">{f.title}</div>
+                <div className="text-white/70 text-sm mt-1">{f.desc}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits */}
+      <section id="benefits" className="relative py-16 px-6">
+        <div className="mx-auto max-w-6xl">
+          <h2 className="text-2xl md:text-3xl font-semibold">
+            Why Choose Fiotech Orbis?
+          </h2>
+          <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {[
+              {
+                icon: "⚡",
+                title: "High Speed & Stability",
+                desc: "Microservices architecture for low-latency performance.",
+              },
+              {
+                icon: "🧩",
+                title: "Easy Integration",
+                desc: "Connect and call blockchain APIs with just 3 lines of code.",
+              },
+              {
+                icon: "🔒",
+                title: "Enterprise Security",
+                desc: "OAuth2 & API key-based authentication for safety and control.",
+              },
+              {
+                icon: "🧱",
+                title: "Multi-chain Support",
+                desc: "Supports Ethereum, Base, BNB Chain, and more.",
+              },
+            ].map((b) => (
+              <div
+                key={b.title}
+                className="rounded-xl p-5 border border-white/10 bg-white/5"
+              >
+                <div className="text-2xl">{b.icon}</div>
+                <div className="mt-2 font-medium">{b.title}</div>
+                <div className="text-white/70 text-sm mt-1">{b.desc}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Use Cases */}
+      <section id="use-cases" className="relative py-16 px-6">
+        <div className="mx-auto max-w-6xl">
+          <h2 className="text-2xl md:text-3xl font-semibold">
+            Who Should Use Orbis?
+          </h2>
+          <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {[
+              {
+                title: "DApp Developers",
+                desc: "Build Web3 apps that interact directly with smart contracts.",
+              },
+              {
+                title: "Fintech & Wallet Apps",
+                desc: "Track balances, transactions, and prices in real time.",
+              },
+              {
+                title: "Exchanges",
+                desc: "Fetch block data, trading events, and analytics easily.",
+              },
+              {
+                title: "Blockchain Analytics",
+                desc: "Use Webhooks and Streams for on-chain behavior insights.",
+              },
+            ].map((u) => (
+              <div
+                key={u.title}
+                className="rounded-xl p-5 border border-white/10 bg-white/5"
+              >
+                <div className="font-medium">{u.title}</div>
+                <div className="text-white/70 text-sm mt-1">{u.desc}</div>
+              </div>
+            ))}
+          </div>
+          <p className="mt-6 text-white/70 text-sm">
+            Example: Listen to ERC-20 Transfer events with just one line of
+            code.
+          </p>
+        </div>
+      </section>
+
+      {/* Developer Demo */}
+      <section id="developer-demo" className="relative py-16 px-6">
+        <div className="mx-auto max-w-6xl">
+          <h2 className="text-2xl md:text-3xl font-semibold">
+            Simple API Example
+          </h2>
+          <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4">
+            <pre className="rounded-xl p-4 bg-black/60 border border-white/10 overflow-auto text-xs md:text-sm">
+              <code>{`curl -X POST https://api-orbis.fiotech.vn/v1/rpc -H 'x-api-key: <YOUR_KEY>' -d '{"method":"eth_getBalance","params":["0x1234...","latest"]}'`}</code>
+            </pre>
+            <pre className="rounded-xl p-4 bg-black/60 border border-white/10 overflow-auto text-xs md:text-sm">
+              <code>{`const client = new OrbisClient({ apiKey: 'your_key' });\nconst balance = await client.eth.getBalance('0x1234...');`}</code>
+            </pre>
+          </div>
+        </div>
+      </section>
+
+      {/* Company */}
+      <section id="company" className="relative py-16 px-6">
+        <div className="mx-auto max-w-6xl">
+          <h2 className="text-2xl md:text-3xl font-semibold">About Fiotech</h2>
+          <p className="mt-3 text-white/70 max-w-3xl">
+            Fiotech Orbis - Building the future of decentralized infrastructure.
+          </p>
+          <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-sm">
+            <div className="rounded-xl p-4 border border-white/10 bg-white/5">
+              <div className="text-white/60">Email</div>
+              <a className="hover:underline" href="mailto:contact@fiotech.vn">
+                contact@fiotech.vn
+              </a>
+            </div>
+            <div className="rounded-xl p-4 border border-white/10 bg-white/5">
+              <div className="text-white/60">Website</div>
+              <a
+                className="hover:underline"
+                href="https://orbis.fiotech.vn"
+                target="_blank"
+                rel="noreferrer"
+              >
+                orbis.fiotech.vn
+              </a>
+            </div>
+            <div className="rounded-xl p-4 border border-white/10 bg-white/5">
+              <div className="text-white/60">Location</div>
+              <div>Ho Chi Minh City, Vietnam</div>
+            </div>
+            <div className="rounded-xl p-4 border border-white/10 bg-white/5">
+              <div className="text-white/60">Social</div>
+              <div className="flex gap-3 mt-1">
+                {["GitHub", "X (Twitter)", "Discord", "LinkedIn"].map((s) => (
+                  <a
+                    key={s}
+                    className="btn-outline rounded-md px-2 py-1 glow-hover"
+                    href="#"
+                    aria-label={s}
+                  >
+                    {s}
+                  </a>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Bottom CTA */}
+      <section id="cta" className="relative py-16 px-6">
+        <div className="mx-auto max-w-5xl text-center glass rounded-2xl p-8">
+          <h3 className="text-2xl md:text-3xl font-semibold">
+            Ready to build your next Web3 app?
+          </h3>
+          <div className="mt-6 flex items-center justify-center gap-3">
+            <a
+              className="btn-primary glow-hover rounded-lg px-6 py-3 text-sm"
+              href="#register"
+            >
+              Register now
+            </a>
+            <a
+              className="btn-outline glow-hover rounded-lg px-6 py-3 text-sm"
+              href="#docs"
+            >
+              View Docs
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="relative border-t border-white/10 px-6 py-8 text-sm text-white/60">
+        <div className="mx-auto max-w-6xl flex flex-col md:flex-row items-center justify-between gap-4">
+          <div>© 2025 Fiotech Orbis. All rights reserved.</div>
+          <div className="flex gap-4">
+            {["Terms", "Privacy", "Status", "Docs"].map((l) => (
+              <a key={l} className="hover:text-white" href="#">
+                {l}
+              </a>
+            ))}
+          </div>
+        </div>
       </footer>
     </div>
   );
