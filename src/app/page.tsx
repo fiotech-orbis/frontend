@@ -1,4 +1,9 @@
-export default function Home() {
+import { auth } from "@/auth";
+import Login from "@/components/login";
+
+export default async function Home() {
+  const session = await auth();
+
   return (
     <div className="min-h-screen bg-[var(--color-background)] text-[var(--color-text)]">
       {/* Navbar */}
@@ -22,18 +27,15 @@ export default function Home() {
             </a>
           </nav>
           <div className="flex items-center gap-2">
-            <a
-              className="btn-outline glow-hover rounded-lg px-4 py-2 text-sm"
-              href="#login"
-            >
-              Login
-            </a>
-            <a
-              className="btn-primary glow-hover rounded-lg px-4 py-2 text-sm"
-              href="#register"
-            >
-              Register
-            </a>
+            <Login className="btn-outline glow-hover rounded-lg px-4 py-2 text-sm" />
+            {!session?.user && (
+              <a
+                className="btn-primary glow-hover rounded-lg px-4 py-2 text-sm"
+                href="#register"
+              >
+                Register
+              </a>
+            )}
           </div>
         </div>
       </header>
