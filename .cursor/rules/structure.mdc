@@ -1,0 +1,22 @@
+---
+description: Standard directory and file structure for Fiotech Orbis Frontend project (Next.js + ShadCN)
+globs: ["**/*"]
+alwaysApply: true
+---
+
+## 🏗️ Root Structure
+
+```bash
+.
+├── app/                  # Next.js App Router pages & layouts
+│   ├── (app)/            # Routes that require authentication
+│   ├── (public)/         # Routes that do not require authentication
+│   ├── layout.tsx        # Root layout
+│   └── page.tsx          # Landing or main page
+│
+├── components/           # Shared and reusable React components
+│   ├── common/           # Reusable composite components (AppSidebar, SiteHeader, ...)
+│   ├── features/         # 
+│   ├── layout/           # Application-level layouts (DashboardLayout, AuthLayout, ...)
+│   └── ui/               # Basic Shadcn UI components (button, input, card, ...)
+```
