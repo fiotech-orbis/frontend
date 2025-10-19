@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { OrbisLogo } from "@/components/common/orbis-logo";
 
 interface LandingLayoutProps {
   children: React.ReactNode;
@@ -13,33 +14,7 @@ export function LandingLayout({ children }: LandingLayoutProps) {
         <nav className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             {/* Logo */}
-            <Link href="/" className="flex items-center gap-3">
-              <div className="relative">
-                <div className="w-10 h-10 bg-gradient-to-br from-[#f4c430] to-[#d4a520] rounded-lg flex items-center justify-center">
-                  <svg
-                    className="w-6 h-6 text-[#0a1628]"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M13 10V3L4 14h7v7l9-11h-7z"
-                    />
-                  </svg>
-                </div>
-              </div>
-              <div>
-                <div className="text-xl font-bold tracking-tight">
-                  FIOTECH <span className="text-[#f4c430]">ORBIS</span>
-                </div>
-                <div className="text-xs text-gray-400 tracking-wide">
-                  SOLUTIONS +++
-                </div>
-              </div>
-            </Link>
+            <OrbisLogo href="/" />
 
             {/* Navigation Links */}
             <div className="hidden md:flex items-center gap-8">
@@ -145,27 +120,8 @@ export function LandingLayout({ children }: LandingLayoutProps) {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {/* Brand */}
             <div className="col-span-1 md:col-span-2">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 bg-gradient-to-br from-[#f4c430] to-[#d4a520] rounded-lg flex items-center justify-center">
-                  <svg
-                    className="w-6 h-6 text-[#0a1628]"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M13 10V3L4 14h7v7l9-11h-7z"
-                    />
-                  </svg>
-                </div>
-                <div>
-                  <div className="text-xl font-bold">
-                    FIOTECH <span className="text-[#f4c430]">ORBIS</span>
-                  </div>
-                </div>
+              <div className="mb-4">
+                <OrbisLogo href="/" showText={true} />
               </div>
               <p className="text-gray-400 text-sm max-w-md">
                 Transforming businesses worldwide with cutting-edge
