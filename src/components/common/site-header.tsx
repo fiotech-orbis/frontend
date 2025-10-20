@@ -1,8 +1,12 @@
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { SidebarTrigger } from "@/components/ui/sidebar";
+import { LanguageSwitcher } from "./language-switcher";
+import { useTranslations } from "next-intl";
 
 export function SiteHeader() {
+  const t = useTranslations();
+
   return (
     <header className="flex h-(--header-height) shrink-0 items-center gap-2 border-b dark:border-white/10 dark:bg-card/50 backdrop-blur-sm transition-[width,height] ease-linear group-has-data-[collapsible=icon]/sidebar-wrapper:h-(--header-height)">
       <div className="flex w-full items-center gap-1 px-4 lg:gap-2 lg:px-6">
@@ -11,8 +15,9 @@ export function SiteHeader() {
           orientation="vertical"
           className="mx-2 data-[orientation=vertical]:h-4 dark:bg-white/10"
         />
-        <h1 className="text-base font-medium">Dashboard</h1>
+        <h1 className="text-base font-medium">{t("common.dashboard")}</h1>
         <div className="ml-auto flex items-center gap-2">
+          <LanguageSwitcher />
           <Button variant="ghost" asChild size="sm">
             <a
               href="#"
@@ -37,7 +42,7 @@ export function SiteHeader() {
                   d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
                 />
               </svg>
-              Settings
+              {t("common.settings")}
             </a>
           </Button>
         </div>

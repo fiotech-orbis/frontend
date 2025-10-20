@@ -1,9 +1,14 @@
+"use client";
+
 import { LandingLayout } from "@/components/layout/landing-layout";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 export default function Home() {
+  const t = useTranslations("HomePage");
+
   return (
     <LandingLayout>
       {/* Hero Section */}
@@ -25,25 +30,25 @@ export default function Home() {
                   d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"
                 />
               </svg>
-              LEADING WEB3 SOLUTIONS PROVIDER
+              {t("hero.badge")}
             </Badge>
 
             <div className="space-y-4">
               <h1 className="text-5xl lg:text-6xl font-bold leading-tight">
-                Enterprise
+                {t("hero.title")}
                 <br />
-                <span className="text-[#f4c430]">Blockchain</span>
+                <span className="text-[#f4c430]">
+                  {t("hero.titleHighlight")}
+                </span>
                 <br />
-                Solutions
+                {t("hero.titleSuffix")}
               </h1>
 
               <div className="h-1 w-24 bg-gradient-to-r from-[#f4c430] to-transparent" />
             </div>
 
             <p className="text-lg text-gray-400 leading-relaxed max-w-xl">
-              Transforming businesses worldwide with cutting-edge cryptocurrency
-              development, blockchain technology, and comprehensive Web3
-              platforms.
+              {t("hero.description")}
             </p>
 
             {/* Stats */}
@@ -67,7 +72,9 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="text-3xl font-bold text-[#f4c430]">500+</div>
-                <div className="text-sm text-gray-400">PROJECTS DELIVERED</div>
+                <div className="text-sm text-gray-400">
+                  {t("hero.stats.projects")}
+                </div>
               </div>
 
               <div className="space-y-2">
@@ -89,7 +96,9 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="text-3xl font-bold text-[#f4c430]">24/7</div>
-                <div className="text-sm text-gray-400">EXPERT SUPPORT</div>
+                <div className="text-sm text-gray-400">
+                  {t("hero.stats.support")}
+                </div>
               </div>
 
               <div className="space-y-2">
@@ -111,7 +120,9 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="text-3xl font-bold text-[#f4c430]">50+</div>
-                <div className="text-sm text-gray-400">COUNTRIES SERVED</div>
+                <div className="text-sm text-gray-400">
+                  {t("hero.stats.countries")}
+                </div>
               </div>
             </div>
 
@@ -122,7 +133,7 @@ export default function Home() {
                   size="lg"
                   className="bg-[#f4c430] text-[#0a1628] hover:bg-[#e5b520] font-semibold px-8 shadow-lg shadow-[#f4c430]/20"
                 >
-                  Get Started
+                  {t("hero.buttons.getStarted")}
                   <svg
                     className="w-4 h-4 ml-2"
                     fill="none"
@@ -143,7 +154,7 @@ export default function Home() {
                 variant="outline"
                 className="border-[#f4c430]/30 text-[#f4c430] hover:bg-[#f4c430]/10 px-8"
               >
-                Learn More
+                {t("hero.buttons.learnMore")}
               </Button>
             </div>
           </div>
@@ -181,13 +192,13 @@ export default function Home() {
               <div className="absolute top-10 right-0 animate-bounce">
                 <Badge className="bg-[#1a2f4d] text-white border-[#f4c430]/30 shadow-lg">
                   <span className="text-[#f4c430] mr-2">◆</span>
-                  Enterprise Ready
+                  {t("hero.badges.enterpriseReady")}
                 </Badge>
               </div>
               <div className="absolute bottom-20 left-0 animate-bounce delay-75">
                 <Badge className="bg-[#1a2f4d] text-white border-[#f4c430]/30 shadow-lg">
                   <span className="text-[#f4c430] mr-2">◆</span>
-                  Premium Quality
+                  {t("hero.badges.premiumQuality")}
                 </Badge>
               </div>
             </div>
@@ -200,14 +211,16 @@ export default function Home() {
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <Badge className="bg-[#f4c430]/10 text-[#f4c430] border-[#f4c430]/20 mb-4">
-              OUR SERVICES
+              {t("services.badge")}
             </Badge>
             <h2 className="text-4xl font-bold mb-4">
-              Web3 APIs &{" "}
-              <span className="text-[#f4c430]">Blockchain Data</span>
+              {t("services.title")}{" "}
+              <span className="text-[#f4c430]">
+                {t("services.titleHighlight")}
+              </span>
             </h2>
             <p className="text-gray-400 max-w-2xl mx-auto">
-              Comprehensive blockchain infrastructure for modern applications
+              {t("services.description")}
             </p>
           </div>
 
@@ -230,11 +243,10 @@ export default function Home() {
                 </svg>
               </div>
               <h3 className="text-xl font-semibold mb-3">
-                Real-time Data Streams
+                {t("services.features.realtime.title")}
               </h3>
               <p className="text-gray-400 leading-relaxed">
-                Access live blockchain data with WebSocket connections for
-                instant updates on transactions, blocks, and network events.
+                {t("services.features.realtime.description")}
               </p>
             </div>
 
@@ -256,11 +268,10 @@ export default function Home() {
                 </svg>
               </div>
               <h3 className="text-xl font-semibold mb-3">
-                Secure Infrastructure
+                {t("services.features.security.title")}
               </h3>
               <p className="text-gray-400 leading-relaxed">
-                Enterprise-grade security with encrypted connections, API key
-                management, and role-based access control.
+                {t("services.features.security.description")}
               </p>
             </div>
 
@@ -282,11 +293,10 @@ export default function Home() {
                 </svg>
               </div>
               <h3 className="text-xl font-semibold mb-3">
-                Multi-Chain Support
+                {t("services.features.multichain.title")}
               </h3>
               <p className="text-gray-400 leading-relaxed">
-                Connect to multiple blockchain networks including Ethereum, BSC,
-                Polygon, and more with unified APIs.
+                {t("services.features.multichain.description")}
               </p>
             </div>
           </div>
@@ -298,19 +308,17 @@ export default function Home() {
         <div className="container mx-auto px-6">
           <div className="bg-gradient-to-br from-[#f4c430] to-[#d4a520] rounded-2xl p-12 lg:p-16 text-center">
             <h2 className="text-4xl lg:text-5xl font-bold text-[#0a1628] mb-6">
-              Ready to Build on Web3?
+              {t("cta.title")}
             </h2>
             <p className="text-lg text-[#0a1628]/80 mb-8 max-w-2xl mx-auto">
-              Join thousands of developers and businesses leveraging our
-              blockchain infrastructure to power the next generation of
-              applications.
+              {t("cta.description")}
             </p>
             <Link href="/app">
               <Button
                 size="lg"
                 className="bg-[#0a1628] text-white hover:bg-[#0a1628]/90 font-semibold px-8 shadow-xl"
               >
-                Start Building Now
+                {t("cta.button")}
                 <svg
                   className="w-4 h-4 ml-2"
                   fill="none"

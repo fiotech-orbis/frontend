@@ -1,12 +1,18 @@
+"use client";
+
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { OrbisLogo } from "@/components/common/orbis-logo";
+import { LanguageSwitcher } from "@/components/common/language-switcher";
+import { useTranslations } from "next-intl";
 
 interface LandingLayoutProps {
   children: React.ReactNode;
 }
 
 export function LandingLayout({ children }: LandingLayoutProps) {
+  const t = useTranslations();
+
   return (
     <div className="min-h-screen bg-[#0a1628] text-white">
       {/* Navigation */}
@@ -36,7 +42,7 @@ export function LandingLayout({ children }: LandingLayoutProps) {
                       d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
                     />
                   </svg>
-                  SERVICES
+                  {t("navigation.services")}
                 </div>
               </Link>
               <Link
@@ -57,7 +63,7 @@ export function LandingLayout({ children }: LandingLayoutProps) {
                       d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
                     />
                   </svg>
-                  HOW IT WORKS
+                  {t("navigation.howItWorks")}
                 </div>
               </Link>
               <Link
@@ -78,13 +84,14 @@ export function LandingLayout({ children }: LandingLayoutProps) {
                       d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
                     />
                   </svg>
-                  SOLUTIONS
+                  {t("navigation.solutions")}
                 </div>
               </Link>
             </div>
 
             {/* CTA Button */}
             <div className="flex items-center gap-4">
+              <LanguageSwitcher />
               <Link href="/app">
                 <Button
                   className="bg-[#f4c430] text-[#0a1628] hover:bg-[#e5b520] font-semibold px-6 shadow-lg shadow-[#f4c430]/20"
@@ -103,7 +110,7 @@ export function LandingLayout({ children }: LandingLayoutProps) {
                       d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1"
                     />
                   </svg>
-                  LOGIN
+                  {t("common.login")}
                 </Button>
               </Link>
             </div>
@@ -124,22 +131,22 @@ export function LandingLayout({ children }: LandingLayoutProps) {
                 <OrbisLogo href="/" showText={true} />
               </div>
               <p className="text-gray-400 text-sm max-w-md">
-                Transforming businesses worldwide with cutting-edge
-                cryptocurrency development, blockchain technology, and
-                comprehensive Web3 platforms.
+                {t("footer.description")}
               </p>
             </div>
 
             {/* Quick Links */}
             <div>
-              <h3 className="font-semibold mb-4 text-[#f4c430]">Quick Links</h3>
+              <h3 className="font-semibold mb-4 text-[#f4c430]">
+                {t("footer.quickLinks")}
+              </h3>
               <ul className="space-y-2">
                 <li>
                   <Link
                     href="#services"
                     className="text-sm text-gray-400 hover:text-[#f4c430] transition-colors"
                   >
-                    Services
+                    {t("navigation.services")}
                   </Link>
                 </li>
                 <li>
@@ -147,7 +154,7 @@ export function LandingLayout({ children }: LandingLayoutProps) {
                     href="#solutions"
                     className="text-sm text-gray-400 hover:text-[#f4c430] transition-colors"
                   >
-                    Solutions
+                    {t("navigation.solutions")}
                   </Link>
                 </li>
                 <li>
@@ -155,7 +162,7 @@ export function LandingLayout({ children }: LandingLayoutProps) {
                     href="#how-it-works"
                     className="text-sm text-gray-400 hover:text-[#f4c430] transition-colors"
                   >
-                    How It Works
+                    {t("navigation.howItWorks")}
                   </Link>
                 </li>
               </ul>
@@ -163,19 +170,23 @@ export function LandingLayout({ children }: LandingLayoutProps) {
 
             {/* Contact */}
             <div>
-              <h3 className="font-semibold mb-4 text-[#f4c430]">Contact</h3>
+              <h3 className="font-semibold mb-4 text-[#f4c430]">
+                {t("footer.contact")}
+              </h3>
               <ul className="space-y-2">
-                <li className="text-sm text-gray-400">24/7 Expert Support</li>
-                <li className="text-sm text-gray-400">Serving 50+ Countries</li>
-                <li className="text-sm text-gray-400">500+ Projects</li>
+                <li className="text-sm text-gray-400">{t("footer.support")}</li>
+                <li className="text-sm text-gray-400">
+                  {t("footer.countries")}
+                </li>
+                <li className="text-sm text-gray-400">
+                  {t("footer.projects")}
+                </li>
               </ul>
             </div>
           </div>
 
           <div className="border-t border-white/10 mt-8 pt-8 text-center text-sm text-gray-400">
-            <p>
-              © {new Date().getFullYear()} Fiotech Orbis. All rights reserved.
-            </p>
+            <p>{t("footer.copyright", { year: new Date().getFullYear() })}</p>
           </div>
         </div>
       </footer>
