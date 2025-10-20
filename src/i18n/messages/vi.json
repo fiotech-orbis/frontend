@@ -1,0 +1,73 @@
+{
+  "HomePage": {
+    "hero": {
+      "badge": "NHÀ CUNG CẤP GIẢI PHÁP WEB3 HÀNG ĐẦU",
+      "title": "Giải pháp",
+      "titleHighlight": "Blockchain",
+      "titleSuffix": "Doanh nghiệp",
+      "description": "Chuyển đổi các doanh nghiệp trên toàn thế giới với phát triển tiền điện tử tiên tiến, công nghệ blockchain và các nền tảng Web3 toàn diện.",
+      "stats": {
+        "projects": "DỰ ÁN ĐÃ THỰC HIỆN",
+        "support": "HỖ TRỢ CHUYÊN GIA",
+        "countries": "QUỐC GIA PHỤC VỤ"
+      },
+      "buttons": {
+        "getStarted": "Bắt đầu",
+        "learnMore": "Tìm hiểu thêm"
+      },
+      "badges": {
+        "enterpriseReady": "Sẵn sàng doanh nghiệp",
+        "premiumQuality": "Chất lượng cao cấp"
+      }
+    },
+    "services": {
+      "badge": "DỊCH VỤ CỦA CHÚNG TÔI",
+      "title": "Web3 APIs &",
+      "titleHighlight": "Dữ liệu Blockchain",
+      "description": "Cơ sở hạ tầng blockchain toàn diện cho các ứng dụng hiện đại",
+      "features": {
+        "realtime": {
+          "title": "Luồng dữ liệu thời gian thực",
+          "description": "Truy cập dữ liệu blockchain trực tiếp với kết nối WebSocket để cập nhật tức thì về giao dịch, khối và sự kiện mạng."
+        },
+        "security": {
+          "title": "Cơ sở hạ tầng bảo mật",
+          "description": "Bảo mật cấp doanh nghiệp với kết nối mã hóa, quản lý khóa API và kiểm soát truy cập dựa trên vai trò."
+        },
+        "multichain": {
+          "title": "Hỗ trợ đa chuỗi",
+          "description": "Kết nối với nhiều mạng blockchain bao gồm Ethereum, BSC, Polygon và nhiều hơn nữa với API thống nhất."
+        }
+      }
+    },
+    "cta": {
+      "title": "Sẵn sàng xây dựng trên Web3?",
+      "description": "Tham gia cùng hàng nghìn nhà phát triển và doanh nghiệp tận dụng cơ sở hạ tầng blockchain của chúng tôi để cung cấp năng lượng cho thế hệ ứng dụng tiếp theo.",
+      "button": "Bắt đầu xây dựng ngay"
+    }
+  },
+  "common": {
+    "getStarted": "Bắt đầu",
+    "learnMore": "Tìm hiểu thêm",
+    "startBuilding": "Bắt đầu xây dựng ngay",
+    "settings": "Cài đặt",
+    "dashboard": "Bảng điều khiển",
+    "language": "Ngôn ngữ",
+    "selectLanguage": "Chọn ngôn ngữ",
+    "login": "Đăng nhập"
+  },
+  "navigation": {
+    "services": "Dịch vụ",
+    "howItWorks": "Cách hoạt động",
+    "solutions": "Giải pháp"
+  },
+  "footer": {
+    "description": "Chuyển đổi các doanh nghiệp trên toàn thế giới với phát triển tiền điện tử tiên tiến, công nghệ blockchain và các nền tảng Web3 toàn diện.",
+    "quickLinks": "Liên kết nhanh",
+    "contact": "Liên hệ",
+    "support": "Hỗ trợ chuyên gia 24/7",
+    "countries": "Phục vụ 50+ quốc gia",
+    "projects": "500+ dự án",
+    "copyright": "© {year} Fiotech Orbis. Tất cả quyền được bảo lưu."
+  }
+}

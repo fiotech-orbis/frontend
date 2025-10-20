@@ -1,0 +1,73 @@
+{
+  "HomePage": {
+    "hero": {
+      "badge": "LEADING WEB3 SOLUTIONS PROVIDER",
+      "title": "Enterprise",
+      "titleHighlight": "Blockchain",
+      "titleSuffix": "Solutions",
+      "description": "Transforming businesses worldwide with cutting-edge cryptocurrency development, blockchain technology, and comprehensive Web3 platforms.",
+      "stats": {
+        "projects": "PROJECTS DELIVERED",
+        "support": "EXPERT SUPPORT",
+        "countries": "COUNTRIES SERVED"
+      },
+      "buttons": {
+        "getStarted": "Get Started",
+        "learnMore": "Learn More"
+      },
+      "badges": {
+        "enterpriseReady": "Enterprise Ready",
+        "premiumQuality": "Premium Quality"
+      }
+    },
+    "services": {
+      "badge": "OUR SERVICES",
+      "title": "Web3 APIs &",
+      "titleHighlight": "Blockchain Data",
+      "description": "Comprehensive blockchain infrastructure for modern applications",
+      "features": {
+        "realtime": {
+          "title": "Real-time Data Streams",
+          "description": "Access live blockchain data with WebSocket connections for instant updates on transactions, blocks, and network events."
+        },
+        "security": {
+          "title": "Secure Infrastructure",
+          "description": "Enterprise-grade security with encrypted connections, API key management, and role-based access control."
+        },
+        "multichain": {
+          "title": "Multi-Chain Support",
+          "description": "Connect to multiple blockchain networks including Ethereum, BSC, Polygon, and more with unified APIs."
+        }
+      }
+    },
+    "cta": {
+      "title": "Ready to Build on Web3?",
+      "description": "Join thousands of developers and businesses leveraging our blockchain infrastructure to power the next generation of applications.",
+      "button": "Start Building Now"
+    }
+  },
+  "common": {
+    "getStarted": "Get Started",
+    "learnMore": "Learn More",
+    "startBuilding": "Start Building Now",
+    "settings": "Settings",
+    "dashboard": "Dashboard",
+    "language": "Language",
+    "selectLanguage": "Select Language",
+    "login": "Login"
+  },
+  "navigation": {
+    "services": "Services",
+    "howItWorks": "How It Works",
+    "solutions": "Solutions"
+  },
+  "footer": {
+    "description": "Transforming businesses worldwide with cutting-edge cryptocurrency development, blockchain technology, and comprehensive Web3 platforms.",
+    "quickLinks": "Quick Links",
+    "contact": "Contact",
+    "support": "24/7 Expert Support",
+    "countries": "Serving 50+ Countries",
+    "projects": "500+ Projects",
+    "copyright": "© {year} Fiotech Orbis. All rights reserved."
+  }
+}
