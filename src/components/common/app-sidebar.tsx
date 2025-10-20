@@ -11,7 +11,6 @@ import {
   FaFileWord,
   FaFolder,
   FaQuestionCircle,
-  FaShapes,
   FaListUl,
   FaFileInvoice,
   FaSearch,
@@ -23,13 +22,13 @@ import { NavDocuments } from "@/components/common/nav-documents";
 import { NavMain } from "@/components/common/nav-main";
 import { NavSecondary } from "@/components/common/nav-secondary";
 import { NavUser } from "@/components/common/nav-user";
+import { OrbisLogo } from "@/components/common/orbis-logo";
 import {
   Sidebar,
   SidebarContent,
   SidebarFooter,
   SidebarHeader,
   SidebarMenu,
-  SidebarMenuButton,
   SidebarMenuItem,
 } from "@/components/ui/sidebar";
 
@@ -153,18 +152,12 @@ const data = {
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   return (
     <Sidebar collapsible="offcanvas" {...props}>
-      <SidebarHeader>
+      <SidebarHeader className="border-b dark:border-white/10">
         <SidebarMenu>
           <SidebarMenuItem>
-            <SidebarMenuButton
-              asChild
-              className="data-[slot=sidebar-menu-button]:!p-1.5"
-            >
-              <a href="#">
-                <FaShapes className="!size-5" />
-                <span className="text-base font-semibold">Acme Inc.</span>
-              </a>
-            </SidebarMenuButton>
+            <div className="px-2 py-3">
+              <OrbisLogo href="/" size="sm" showText={true} />
+            </div>
           </SidebarMenuItem>
         </SidebarMenu>
       </SidebarHeader>

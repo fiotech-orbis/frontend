@@ -1,0 +1,233 @@
+---
+description: "Fiotech Orbis Design System - Color Palette & UI Standards"
+globs: ["**/*.tsx", "**/*.ts", "**/*.css", "**/*.scss", "**/*.jsx", "**/*.js"]
+alwaysApply: true
+---
+
+# Fiotech Orbis - Design System & Color Palette
+
+## 🎨 Brand Colors
+
+### Primary Color Palette
+
+```css
+/* Fiotech Brand Colors */
+--fiotech-navy-dark: #0a1628    /* Main background */
+--fiotech-navy-light: #0d1d35   /* Cards, sidebar, popover */
+--fiotech-gold: #f4c430         /* Primary accent, buttons */
+--fiotech-gold-dark: #d4a520    /* Hover states */
+```
+
+### Design Patterns
+
+```css
+/* Border & Effects */
+--border-subtle: white/10%       /* Subtle borders */
+--border-hover: primary/50%      /* Gold hover borders */
+--shadow-glow: shadow-primary/20 /* Gold glow effects */
+--background-tint: primary/10    /* Gold background tints */
+```
+
+## 🌙 Dark Mode CSS Variables
+
+```css
+.dark {
+  --background: oklch(0.11 0.02 240); /* Navy dark */
+  --foreground: oklch(0.985 0 0); /* White text */
+  --card: oklch(0.15 0.02 240); /* Navy light */
+  --primary: oklch(0.82 0.15 85); /* Gold */
+  --border: oklch(1 0 0 / 10%); /* Subtle white */
+  --ring: oklch(0.82 0.15 85); /* Gold ring */
+}
+```
+
+## 🎯 Component Standards
+
+### Button Styling
+
+- **Primary buttons**: Gold background (`#f4c430`) with navy text (`#0a1628`)
+- **Outline buttons**: Gold border with hover effects
+- **Ghost buttons**: Hover with gold tint (`primary/10`)
+- **Always include**: Gold shadow effects (`shadow-primary/20`)
+
+### Card Components
+
+- **Background**: Navy light (`#0d1d35`)
+- **Border**: Subtle white (`white/10%`)
+- **Hover effects**: Gold border (`primary/50%`) + gold shadow
+- **Transitions**: `duration-300` for smooth animations
+
+### Form Elements (Input, Select)
+
+- **Focus ring**: Gold (`primary/20-30`)
+- **Focus border**: Gold (`border-primary`)
+- **Hover effects**: Subtle gold border (`primary/30%`)
+- **Background**: Navy with transparency (`input/30`)
+
+### Badge Components
+
+- **Default**: Gold background (`primary/10`) with gold text
+- **Outline**: Gold border with hover effects
+- **Consistent**: Gold accents for all variants in dark mode
+
+## 📦 Usage Guidelines
+
+### Color Usage Rules
+
+- Background: Navy dark (`#0a1628`) or navy light (`#0d1d35`)
+- Primary actions: Gold (`#f4c430`)
+- Text: White or muted gray
+- Borders: Subtle white (`white/10%`)
+
+### Hover Effects
+
+- Cards: `hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10`
+- Buttons: `hover:shadow-primary/30`
+- Interactive elements: Gold tint on hover
+
+### Focus States
+
+- Form elements: Gold ring (`ring-primary/20`)
+- Buttons: Gold border (`border-primary`)
+- Consistent focus indicators
+
+### Transitions
+
+- Use `transition-all duration-300` for smooth animations
+- Hover effects should be smooth and professional
+
+## 🎨 Brand Identity
+
+### Logo Usage
+
+- **Primary logo**: "FIOTECH ORBIS" with gold accent
+- **Icon**: Upward trending chart in gold
+- **Placement**: Sidebar header only (not in main content header)
+- **Sizing**: Consistent with design system
+
+### Typography
+
+- **Headings**: Bold, professional
+- **Body text**: Clean, readable
+- **Accent text**: Gold color for highlights
+- **Muted text**: Gray-400 for secondary information
+
+## 🚫 Anti-Patterns
+
+### Avoid These Patterns
+
+- ❌ Generic gray/blue color schemes
+- ❌ Purple or blue primary colors
+- ❌ Harsh borders or shadows
+- ❌ Inconsistent hover effects
+- ❌ Light mode as default
+- ❌ Duplicate logos in header
+- ❌ Generic shadcn styling without Fiotech branding
+
+### Instead Use
+
+- ✅ Navy + Gold color scheme
+- ✅ Subtle, elegant effects
+- ✅ Consistent gold accents
+- ✅ Professional appearance
+- ✅ Dark mode optimized
+- ✅ Single logo placement
+- ✅ Fiotech-branded components
+
+## 📱 Responsive Design
+
+### Breakpoints
+
+- Mobile: < 768px
+- Tablet: 768px - 1280px
+- Desktop: 1280px+
+- Large: 1920px+
+
+### Component Behavior
+
+- All components must work across all breakpoints
+- Maintain Fiotech styling on all screen sizes
+- Responsive spacing and sizing
+- Touch-friendly on mobile
+
+## 🔧 Technical Standards
+
+### CSS Classes
+
+```css
+/* Standard hover effects */
+.hover-gold-border {
+  @apply hover:border-primary/50;
+}
+.hover-gold-glow {
+  @apply hover:shadow-lg hover:shadow-primary/10;
+}
+.hover-gold-tint {
+  @apply hover:bg-primary/10;
+}
+
+/* Focus states */
+.focus-gold-ring {
+  @apply focus-visible:ring-primary/20;
+}
+.focus-gold-border {
+  @apply focus-visible:border-primary;
+}
+
+/* Transitions */
+.smooth-transition {
+  @apply transition-all duration-300;
+}
+```
+
+### Component Structure
+
+- Use shadcn/ui as base
+- Override with Fiotech styling
+- Maintain accessibility (ARIA)
+- TypeScript types required
+- No linting errors
+
+## 🎯 Quality Checklist
+
+Before submitting any UI changes:
+
+- ✅ Uses Fiotech color palette (Navy + Gold)
+- ✅ Consistent hover/focus effects
+- ✅ Smooth transitions (300ms)
+- ✅ Dark mode optimized
+- ✅ Responsive design
+- ✅ No linting errors
+- ✅ Accessible (ARIA compliant)
+- ✅ Professional appearance
+- ✅ Brand consistency
+
+## 📖 Code Examples
+
+### Good Button Implementation
+
+```tsx
+<Button className="bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg shadow-primary/20">
+  Get Started
+</Button>
+```
+
+### Good Card Implementation
+
+```tsx
+<Card className="dark:border-white/10 dark:hover:border-primary/50 dark:hover:shadow-lg dark:hover:shadow-primary/10 transition-all duration-300">
+  <CardHeader>
+    <CardTitle>Title</CardTitle>
+  </CardHeader>
+</Card>
+```
+
+### Good Input Implementation
+
+```tsx
+<Input className="focus-visible:border-primary dark:focus-visible:ring-primary/20 hover:dark:border-primary/30" />
+```
+
+---
+
+**Remember: Every component should feel like it belongs to the Fiotech Orbis brand - professional, elegant, and consistent with the Navy + Gold design system.**
