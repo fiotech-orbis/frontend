@@ -79,37 +79,54 @@
 }
 
 .dark {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.205 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.205 0 0);
+  /* Fiotech brand colors - #0a1628 (navy), #f4c430 (gold) */
+  
+  /* Base colors - Fiotech navy dark */
+  --background: oklch(0.11 0.02 240);      /* #0a1628 - navy dark */
+  --foreground: oklch(0.985 0 0);          /* white */
+  --card: oklch(0.15 0.02 240);            /* #0d1d35 - navy light */
+  --card-foreground: oklch(0.985 0 0);     /* white */
+  --popover: oklch(0.15 0.02 240);         /* navy light */
   --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.922 0 0);
-  --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
+  
+  /* Primary = Fiotech Gold (#f4c430) */
+  --primary: oklch(0.82 0.15 85);          /* #f4c430 - gold */
+  --primary-foreground: oklch(0.11 0.02 240); /* #0a1628 - navy for contrast */
+  
+  /* Secondary & Muted - navy variations */
+  --secondary: oklch(0.22 0.03 240);       /* #1a2f4d - lighter navy */
   --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
-  --destructive: oklch(0.704 0.191 22.216);
+  --muted: oklch(0.22 0.03 240);
+  --muted-foreground: oklch(0.65 0 0);     /* gray-400 */
+  
+  /* Accent = Gold accents */
+  --accent: oklch(0.22 0.03 240);          /* navy accent bg */
+  --accent-foreground: oklch(0.82 0.15 85); /* gold text */
+  
+  /* Destructive */
+  --destructive: oklch(0.62 0.25 29);      /* red */
+  
+  /* Border & Input - subtle white with opacity */
   --border: oklch(1 0 0 / 10%);
   --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.556 0 0);
-  --chart-1: oklch(0.488 0.243 264.376);
-  --chart-2: oklch(0.696 0.17 162.48);
-  --chart-3: oklch(0.769 0.188 70.08);
-  --chart-4: oklch(0.627 0.265 303.9);
-  --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: oklch(0.205 0 0);
+  --ring: oklch(0.82 0.15 85);             /* gold ring */
+  
+  /* Charts - gold themed spectrum */
+  --chart-1: oklch(0.82 0.15 85);          /* gold #f4c430 */
+  --chart-2: oklch(0.72 0.12 80);          /* gold dark #d4a520 */
+  --chart-3: oklch(0.80 0.14 88);          /* amber-400 */
+  --chart-4: oklch(0.70 0.16 75);          /* amber-500 */
+  --chart-5: oklch(0.60 0.14 70);          /* amber-600 */
+  
+  /* Sidebar - Fiotech navy with gold accents */
+  --sidebar: oklch(0.15 0.02 240);         /* navy light */
   --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.82 0.15 85);  /* gold */
+  --sidebar-primary-foreground: oklch(0.11 0.02 240); /* navy */
+  --sidebar-accent: oklch(0.22 0.03 240);
+  --sidebar-accent-foreground: oklch(0.82 0.15 85); /* gold */
   --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.556 0 0);
+  --sidebar-ring: oklch(0.82 0.15 85);     /* gold */
 }
 
 @layer base {
